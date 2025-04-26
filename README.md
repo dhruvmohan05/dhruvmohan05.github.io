@@ -1,2 +1,458 @@
-# dhruvmohan05.github.io
-Dhruv's Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhruv Mohan - Resumé</title>
+  <link rel="icon" type="image/png" href="Black.jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #cecece;
+      color: #083811;
+    }
+
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 90px;
+      background-color: #cecece;
+      box-sizing: border-box;
+    }
+
+    header {
+      margin-bottom: 40px;
+    }
+
+    .contact {
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid #083811;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .experience-section {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .experience-section::-webkit-scrollbar {
+      display: none;
+    }
+
+    .job-column {
+      flex: 0 0 auto;
+      max-width: 400px;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .job-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .job-company {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+    }
+
+    .job-description {
+      font-size: 0.9em;
+      color: #083811;
+    }
+
+    .skills {
+      margin-top: 20px;
+    }
+
+    .skill {
+      margin-bottom: 10px;
+    }
+
+    .skill-name {
+      margin-bottom: 4px;
+    }
+
+    .bar {
+      background-color: #26c33e;
+      height: 15px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background-color: #083811;
+      width: 0;
+      animation: fillBar 3s ease-out forwards;
+      border-radius: 6px;
+    }
+
+    .pdf-button {
+      background-color: #083811;
+      color: #cecece;
+      border: 2px solid #083811;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .pdf-footer {
+  background-color: #000;
+  color: #cecece;
+  padding: 30px 60px;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.pdf-only-padding {
+  display: none;
+}
+
+.footer-content {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+}
+
+.footer-column {
+  min-width: 150px;
+  flex: 1;
+}
+
+.footer-column a {
+  color: #26c33e;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+    .pdf-button:hover {
+      background-color: #26c33e;
+      color: #083811;
+    }
+
+    @keyframes fillBar {
+      to {
+        width: var(--fill-width);
+      }
+    }
+
+    .three-column-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .reference-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh; /* Full viewport height */
+  text-align: center;
+  font-size: 1em;
+}
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+      background-color: rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<body>
+  <div class="container">
+    <div class="contact">
+      Newton, MA 02459<br>
+      (617) 360-1967<br>
+      dhruvmohanx@gmail.com
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <h1 style="margin: 0;">Dhruv Mohan</h1>
+      <button class="pdf-button" onclick="downloadPDF()">
+        Download PDF
+      </button>
+    </div>
+
+    <p>I am a self-motivated, focused and creative freshman at Newton South looking to engage with youth interested in developing their technical skills.</p>
+
+    <h2>Experience</h2>
+<div class="experience-section">
+  <div class="job-column">
+    <div class="job-title">Camp Mowglis</div>
+    <div class="job-company">Youth Leadership Development Program<br>2025</div>
+    <div class="job-description">
+      Actively participating in a 7-week program focused on team building, community service, and leadership development. <br>
+      Link to <a href="https://www.mowglis.org/yearling-program/" target="_blank">Program</a>
+    </div>
+  </div>
+
+  <div class="job-column">
+    <div class="job-title">NuVu Project Team Leader</div>
+    <div class="job-company">Team Lead for Engineering Projects<br>2023 - 2024</div>
+    <div class="job-description">
+      Led technical teams producing deliverables such as robotic arms, 3D printer filament recyclers, and personalized tools for Land's Sake Farm.
+    </div>
+  </div>
+
+  <div class="job-column">
+    <div class="job-title">Basketball Coach</div>
+    <div class="job-company">Kids Basketball Trainer<br>2021 - 2022</div>
+    <div class="job-description">
+      Coached 3-5 kids on fundamental basketball skills such as passing, shooting, and dribbling.
+    </div>
+  </div>
+</div>
+
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name">Communication/Coaching 7/10</div>
+        <div class="bar"><div class="bar-fill" style="--fill-width: 70%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Leadership 8/10</div>
+        <div class="bar"><div class="bar-fill" style="--fill-width: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Technical/Problem Solving 9/10</div>
+        <div class="bar"><div class="bar-fill" style="--fill-width: 90%;"></div></div>
+      </div>
+    </div>
+
+    <h2>Education, Extracurriculars & Hobbies</h2>
+    <div class="three-column-container">
+      <div class="column">
+        <h3>Education</h3>
+        <div class="education">
+          <div class="job-title">Newton South High School - Class of 2028</div>
+          <div class="job-company">Computer Science I (Honors), Robotics II, Intro to Object Oriented Programming. <br>2024 – Present</div>
+        </div>
+        <div class="education">
+          <div class="job-title">NuVu Innovation School</div>
+          <div class="job-company">Developed and presented multiple technical projects.<br>Link to <a href="https://cambridge.nuvustudio.com/users/dhruv-mohan" target="_blank">Portfolio</a> <br>2023 – 2024</div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h3>Extracurriculars & Sports</h3>
+        <div class="extracurriculars">
+          <div class="job-title">Public Forum Debate</div>
+          <div class="job-company">Little Lex Semifinalist (4th Speaker of 130) <br> St Nick Showdown @ Arlington (4th Speaker of 84) <br>Lexington Winter Invitational Quarterfinalist <br> The 30th Mardi Gras Speech Carnivale (5th Speaker of 90)<br>MSDL State Debate Final Doubleoctofinalist <br>2024 – Present</div>
+        </div>
+        <div class="education">
+          <div class="job-title">Varsity Ultimate Frisbee Team</div>
+          <div class="job-company">On starting lineup with aspirations to win States<br>2025 – Present</div>
+        </div>
+        
+      </div>
+
+      <div class="column">
+        <h3>Other Interests/Hobbies</h3>
+        <div class="extracurriculars">
+          <div class="job-title">Mountain Biking</div>
+          <div class="job-company">Trail riding and exploration in MA state forests</div>
+        </div>
+        <div class="extracurriculars">
+          <div class="job-title">Hiking/Camping</div>
+          <div class="job-company">Advanced hiker who has completed the Presidential Range and summited Salkantay Pass in Peru (Elev: 15,090ft).</div>
+        </div>
+        <div class="extracurriculars">
+          <div class="job-title">3D Printing, CAD Modeling & Robotics</div>
+          <div class="job-company">Hands-on building and electronics experimentation</div>
+        </div>
+        <div class="extracurriculars">
+          <div class="job-title">Woodworking</div>
+          <div class="job-company">Crafted multiple handmade projects (Chairs, Picnic Table, etc...), with experience using a variety of different tools</div>
+        </div>
+      </div>
+    </div>
+    <div class="pdf-only-padding"></div>
+    <div class="reference-center">
+      References available upon request.
+    </div>
+    
+    
+  </div>
+  
+  <script>
+    const experienceSection = document.querySelector('.experience-section');
+    let lastScrollTop = window.scrollY;
+    let hasScrolledRight = false;
+    let hasScrolledBack = false;
+
+    function scrollBackLeft() {
+      const step = 15;
+      const scroll = () => {
+        if (experienceSection.scrollLeft > 0) {
+          experienceSection.scrollLeft -= step;
+          requestAnimationFrame(scroll);
+        } else {
+          hasScrolledRight = false;
+          hasScrolledBack = true;
+        }
+      };
+      scroll();
+    }
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const goingDown = scrollTop > lastScrollTop;
+      lastScrollTop = scrollTop;
+
+      const sectionTop = experienceSection.getBoundingClientRect().top;
+      const maxHorizontalScroll = experienceSection.scrollWidth - experienceSection.clientWidth;
+
+      if (goingDown && sectionTop <= 200 && !hasScrolledRight) {
+        experienceSection.scrollLeft = maxHorizontalScroll;
+        hasScrolledRight = true;
+        hasScrolledBack = false;
+      }
+
+      if (!goingDown && sectionTop <= 200 && hasScrolledRight && !hasScrolledBack) {
+        scrollBackLeft();
+      }
+    });
+  </script>
+
+<script>
+  function downloadPDF() {
+    const original = document.querySelector('.container');
+    const clone = original.cloneNode(true);
+
+    // Remove the download button
+    const button = clone.querySelector('.pdf-button');
+    if (button) button.remove();
+
+    // Fill skill bars
+    const bars = clone.querySelectorAll('.bar-fill');
+    bars.forEach(bar => {
+      const width = bar.style.getPropertyValue('--fill-width');
+      bar.style.width = width;
+      bar.style.animation = 'none';
+    });
+
+    // Expand experience section for full visibility
+    const expSection = clone.querySelector('.experience-section');
+    expSection.style.overflow = 'visible';
+    expSection.style.flexWrap = 'wrap';
+    expSection.style.justifyContent = 'flex-start';
+
+    // Force cloned container to fill the page width
+    clone.style.width = '100%';
+    clone.style.maxWidth = '100%';
+    clone.style.boxSizing = 'border-box';
+    clone.style.padding = '20px';
+    clone.style.backgroundColor = '#cecece';
+    const paddingDiv = clone.querySelector('.pdf-only-padding');
+if (paddingDiv) {
+  paddingDiv.style.display = 'block';
+  paddingDiv.style.height = '172px'; // Adjust height as needed
+  paddingDiv.style.backgroundColor = '#cecece';
+}
+
+    // NEW: Wrap clone in a full-page div to apply persistent background
+    const bgWrapper = document.createElement('div');
+    bgWrapper.style.backgroundColor = '#cecece';
+    bgWrapper.style.padding = '0';
+    bgWrapper.style.margin = '0';
+    bgWrapper.style.minHeight = '100vh';
+    bgWrapper.style.width = '100%';
+    bgWrapper.appendChild(clone);
+
+    // Hidden container to render PDF from
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'absolute';
+    wrapper.style.left = '-9999px';
+    wrapper.style.top = '0';
+    wrapper.style.width = '100%';
+    wrapper.appendChild(bgWrapper);
+    document.body.appendChild(wrapper);
+
+    // Wait for DOM update before rendering PDF
+    requestAnimationFrame(() => {
+      const opt = {
+        margin: 0,
+        filename: 'Dhruv_Mohan_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 3,
+          backgroundColor: '#cecece' // also set here as fallback
+        },
+        jsPDF: {
+          unit: 'pt',
+          format: 'letter',
+          orientation: 'portrait'
+        }
+      };
+
+      html2pdf().set(opt).from(bgWrapper).save().then(() => {
+        document.body.removeChild(wrapper);
+      });
+    });
+  }
+</script>
+
+
+
+<footer class="pdf-footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <strong>Contact</strong>
+      <p>dhruvmohanx@gmail.com</p>
+      <p>(617) 360-1967</p>
+    </div>
+    <div class="footer-column">
+      <strong>Location</strong>
+      <p>Newton, MA 02459</p>
+    </div>
+    <div class="footer-column">
+      <strong>Links</strong>
+      <p><a href="https://cambridge.nuvustudio.com/users/dhruv-mohan" target="_blank">NuVu Projects</a><br><a href="https://www.mowglis.org/yearling-program/" target="_blank">Mowglis Youth Leadership Program</a></p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+
+</html>
